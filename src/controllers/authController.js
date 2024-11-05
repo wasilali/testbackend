@@ -17,8 +17,6 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendOtp = async (email, otp) => {
-  console.log(userEmail, userPassword,process.env.NODE_EMAIL_USER,"email and password");
-  
   try {
     await transporter.sendMail({
       from: userEmail,
